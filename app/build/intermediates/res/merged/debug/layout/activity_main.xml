@@ -1,0 +1,200 @@
+<!--
+Anthony Martel - Étienne Boisjoli
+Version 1.2
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@layout/bg_player_footer"
+    android:id="@+id/myLayout" >
+    
+    
+    
+   <LinearLayout 
+        android:id="@+id/player_header_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@layout/bg_player_header">
+        
+        <TextView
+        	android:id="@+id/txtSongTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#00C6FF"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:text="Veuillez choisir une chanson :)"
+            android:layout_marginTop="10dp" />
+        
+        <ImageButton
+       		android:id="@+id/btnPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/btn_playlist"
+            android:background="@null" />
+        	
+        
+    </LinearLayout>
+    
+    
+
+   	<LinearLayout 
+   	    android:id="@+id/player_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        
+   	    	<LinearLayout
+   	    	    android:id="@+id/bob"
+   	    	    android:layout_width="277dp"
+   	    	    android:layout_height="wrap_content"
+   	    	    android:background="@layout/bg_player_button"
+   	    	    android:gravity="center_vertical"
+   	    	    android:orientation="horizontal"
+   	    	    android:padding="10dp" >
+        		
+   	    	    	<ImageButton
+   	    	    	    android:id="@+id/btnPrevious"
+   	    	    	    android:layout_width="wrap_content"
+   	    	    	    android:layout_height="wrap_content"
+   	    	    	    android:layout_weight="1"
+   	    	    	    android:background="@null"
+   	    	    	    android:paddingBottom="10dp"
+   	    	    	    android:paddingTop="10dp"
+   	    	    	    android:scaleType="fitEnd"
+   	    	    	    android:src="@drawable/btn_previous" />
+        		
+   	    	    	<ImageButton
+        				android:id="@+id/btnPlay"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:src="@drawable/btn_play"
+				        android:background="@null"
+				        android:layout_weight="1"
+				        android:scaleType="fitCenter"/>
+   	    	    	
+   	    	    	<ImageButton
+   	    	    	    android:id="@+id/btnNext"
+   	    	    	    android:layout_width="wrap_content"
+   	    	    	    android:layout_height="wrap_content"
+   	    	    	    android:layout_weight="1"
+   	    	    	    android:background="@null"
+   	    	    	    android:paddingBottom="10dp"
+   	    	    	    android:paddingTop="10dp"
+   	    	    	    android:scaleType="fitStart"
+   	    	    	    android:src="@drawable/btn_next" />
+   	    	    
+   	    	</LinearLayout>
+   	    
+   	</LinearLayout>
+   	
+   	<SeekBar
+        android:id="@+id/sbSongProgress12"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/player_footer"
+        android:thumb="@drawable/bar_piton"
+        android:progressDrawable="@drawable/bar_progress"/>
+   	
+
+   	
+   	<LinearLayout 
+   	    android:id="@+id/player_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sbSongProgress12"
+        android:layout_marginBottom="1dp">
+   	    	
+   	    <TextView
+		        android:id="@+id/txtCurrentTime"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="20dp"
+		        android:text="0:00"
+		        android:layout_weight="1"
+		        android:gravity="left"
+	            android:textColor="#eeeeee"
+	            android:textStyle="bold" />
+   	    	
+   	    <TextView
+		        android:id="@+id/txtDuration"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingRight="20dp"
+		        android:text="0:00"
+		        android:layout_weight="1"
+		        android:gravity="right"
+	            android:textColor="#00C6FF"
+	            android:textStyle="bold" />	
+   	    
+   	</LinearLayout>
+   	
+   	<LinearLayout 
+   	    android:id="@+id/repeat_shuffle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/player_time"
+        android:layout_marginBottom="10dp">
+   	    
+   	    	<ImageButton
+      			android:id="@+id/btnRepeat"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/repeat"
+		        android:background="@null"
+		        android:layout_weight="1"
+		        android:gravity="left"
+		        android:paddingLeft="100dp"/>
+ 	    	    	
+ 	    	<ImageButton
+      			android:id="@+id/btnShuffle"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/shuffle"
+		        android:background="@null"
+		        android:gravity="right"
+		        android:paddingRight="100dp"
+		        android:layout_weight="1"/>
+   	    
+   	</LinearLayout>
+   	
+   	<LinearLayout 
+        android:id="@+id/player_middle_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/repeat_shuffle"
+        android:layout_below="@id/player_header_bg"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+>
+
+        <ImageView
+            android:id="@+id/imgAndroidPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_player_android" />
+    
+    </LinearLayout>
+
+
+    
+
+</RelativeLayout>

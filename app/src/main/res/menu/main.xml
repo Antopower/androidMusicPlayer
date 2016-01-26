@@ -1,0 +1,19 @@
+<!--
+Anthony Martel - Étienne Boisjoli
+Version 1.4
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Cliquez pour activer l'aléaShake!"/>
+    
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Quitter l'application"/>
+
+</menu>
